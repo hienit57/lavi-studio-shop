@@ -37,7 +37,8 @@ class _CImageState extends State<CImage> {
     return Container(
       child: (() {
         if (widget.assetsPath != null) {
-          if (widget.assetsPath!.contains('.png')) {
+          if (widget.assetsPath!.contains('.png') ||
+              widget.assetsPath!.contains('.jpeg')) {
             return ClipRRect(
                 borderRadius: BorderRadius.circular(widget.radius ?? 0),
                 child: Image.asset(

@@ -1,6 +1,7 @@
 import 'package:lavi_studio_shop/common/global/index.dart';
 import 'package:lavi_studio_shop/core/routes/index.dart';
 import 'package:lavi_studio_shop/features/dashboard/presentation/pages/dashboard_page.dart';
+import 'package:lavi_studio_shop/features/home/presentation/pages/home_page.dart';
 import 'package:lavi_studio_shop/features/login/index.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,8 @@ final GoRouter routerConfig = GoRouter(
         (await DataUserLoginCachedClient.instance.getData())?.token;
 
     if (accessToken == null) {
-      return LoginPage.routeName;
+      return HomePage.routeName;
+      //return LoginPage.routeName;
     }
     return state.path;
   },
@@ -28,18 +30,18 @@ final GoRouter routerConfig = GoRouter(
       routes: [
         GoRoute(
             parentNavigatorKey: inAppNavigatorKey,
-            path: Dashboard.routeName,
+            path: HomePage.routeName,
             pageBuilder: ((context, state) => const NoTransitionPage(
-                  child: Dashboard(),
+                  child: HomePage(),
                 )),
             routes: [
-              // GoRoute(
-              //   parentNavigatorKey: inAppNavigatorKey,
-              //   path: pathFormat(DashboardAppointmentsPage.routeName),
-              //   pageBuilder: ((context, state) => const NoTransitionPage(
-              //         child: DashboardAppointmentsPage(),
-              //       )),
-              // ),
+              GoRoute(
+                parentNavigatorKey: inAppNavigatorKey,
+                path: pathFormat(HomePage.routeName),
+                pageBuilder: ((context, state) => const NoTransitionPage(
+                      child: HomePage(),
+                    )),
+              ),
             ]),
       ],
     ),

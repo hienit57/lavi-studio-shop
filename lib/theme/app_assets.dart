@@ -54,4 +54,6 @@ class AppAssets {
   static const imUserWhenNull = '$_baseUrl/im_user_when_null.svg';
   static const imViewDatePicker = '$_baseUrl/im_view_date_picker.svg';
   static const icPhoto = '$_baseUrl/ic_photo.svg';
+
+  static const imProductDemo = '$_baseUrl/im_product_demo.jpeg';
 }
