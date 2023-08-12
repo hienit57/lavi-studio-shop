@@ -1,4 +1,4 @@
-import 'package:bas_clean_architecture/core/local_data/pref_keys.dart';
+import 'package:lavi_studio_shop/core/local_data/pref_keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPrefsHelper {

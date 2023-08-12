@@ -1,16 +1,16 @@
-import 'package:bas_clean_architecture/core/local_data/pref_utils.dart';
-import 'package:bas_clean_architecture/core/mixins/index.dart';
-import 'package:bas_clean_architecture/core/network/http_request/loggers/log_interceptor.dart';
-import 'package:bas_clean_architecture/core/network/http_request/request_model/request_model.dart';
-import 'package:bas_clean_architecture/core/network/http_request/request_model/request_status_code.dart';
-import 'package:bas_clean_architecture/core/network/index.dart';
-import 'package:bas_clean_architecture/features/login/data/data_cached_clients/login_data_cached.dart';
-import 'package:bas_clean_architecture/features/login/presentation/bloc/login_cubit.dart';
-import 'package:bas_clean_architecture/index.dart';
-import 'package:bas_clean_architecture/utils/index.dart';
+import 'package:lavi_studio_shop/core/local_data/pref_utils.dart';
+import 'package:lavi_studio_shop/core/mixins/index.dart';
+import 'package:lavi_studio_shop/core/network/http_request/loggers/log_interceptor.dart';
+import 'package:lavi_studio_shop/core/network/http_request/request_model/request_model.dart';
+import 'package:lavi_studio_shop/core/network/http_request/request_model/request_status_code.dart';
+import 'package:lavi_studio_shop/core/network/index.dart';
+import 'package:lavi_studio_shop/features/login/data/data_cached_clients/login_data_cached.dart';
+import 'package:lavi_studio_shop/features/login/presentation/bloc/login_cubit.dart';
+import 'package:lavi_studio_shop/index.dart';
+import 'package:lavi_studio_shop/utils/index.dart';
 import 'package:flutter/foundation.dart';
 import 'package:dio/dio.dart';
-import 'package:bas_clean_architecture/core/env/app_env.dart';
+import 'package:lavi_studio_shop/core/env/app_env.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 

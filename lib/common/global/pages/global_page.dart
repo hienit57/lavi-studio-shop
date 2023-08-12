@@ -1,8 +1,8 @@
-import 'package:bas_clean_architecture/common/global/index.dart';
-import 'package:bas_clean_architecture/theme/app_colors.dart';
-import 'package:bas_clean_architecture/utils/responsive.dart';
+import 'package:lavi_studio_shop/common/global/index.dart';
+import 'package:lavi_studio_shop/theme/app_colors.dart';
+import 'package:lavi_studio_shop/utils/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:bas_clean_architecture/index.dart';
+import 'package:lavi_studio_shop/index.dart';
 
 class GlobalPage extends StatefulWidget {
   final Widget child;

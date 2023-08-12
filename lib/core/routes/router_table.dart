@@ -1,7 +1,7 @@
-import 'package:bas_clean_architecture/common/global/index.dart';
-import 'package:bas_clean_architecture/core/routes/index.dart';
-import 'package:bas_clean_architecture/features/dashboard/presentation/pages/dashboard_page.dart';
-import 'package:bas_clean_architecture/features/login/index.dart';
+import 'package:lavi_studio_shop/common/global/index.dart';
+import 'package:lavi_studio_shop/core/routes/index.dart';
+import 'package:lavi_studio_shop/features/dashboard/presentation/pages/dashboard_page.dart';
+import 'package:lavi_studio_shop/features/login/index.dart';
 import 'package:flutter/material.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();

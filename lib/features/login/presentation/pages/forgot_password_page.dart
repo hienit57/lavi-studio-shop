@@ -1,10 +1,10 @@
-import 'package:bas_clean_architecture/common/ui_components/index.dart';
-import 'package:bas_clean_architecture/core/enums/enums.dart';
-import 'package:bas_clean_architecture/core/mixins/index.dart';
-import 'package:bas_clean_architecture/core/routes/index.dart';
-import 'package:bas_clean_architecture/features/login/index.dart';
-import 'package:bas_clean_architecture/index.dart';
-import 'package:bas_clean_architecture/theme/index.dart';
+import 'package:lavi_studio_shop/common/ui_components/index.dart';
+import 'package:lavi_studio_shop/core/enums/enums.dart';
+import 'package:lavi_studio_shop/core/mixins/index.dart';
+import 'package:lavi_studio_shop/core/routes/index.dart';
+import 'package:lavi_studio_shop/features/login/index.dart';
+import 'package:lavi_studio_shop/index.dart';
+import 'package:lavi_studio_shop/theme/index.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordPage extends StatefulWidget {

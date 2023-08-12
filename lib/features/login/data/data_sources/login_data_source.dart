@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:bas_clean_architecture/core/network/index.dart';
-import 'package:bas_clean_architecture/features/login/data/data_cached_clients/login_data_cached.dart';
-import 'package:bas_clean_architecture/features/login/data/models/login_response_model.dart';
-import 'package:bas_clean_architecture/features/login/data/requests/login_request.dart';
-import 'package:bas_clean_architecture/features/login/data/requests/refresh_token_request.dart';
+import 'package:lavi_studio_shop/core/network/index.dart';
+import 'package:lavi_studio_shop/features/login/data/data_cached_clients/login_data_cached.dart';
+import 'package:lavi_studio_shop/features/login/data/models/login_response_model.dart';
+import 'package:lavi_studio_shop/features/login/data/requests/login_request.dart';
+import 'package:lavi_studio_shop/features/login/data/requests/refresh_token_request.dart';
 
 class LoginDataSource {
   Future<LoginResponse?> login(

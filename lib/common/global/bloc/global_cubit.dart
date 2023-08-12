@@ -1,6 +1,6 @@
-import 'package:bas_clean_architecture/core/mixins/index.dart';
+import 'package:lavi_studio_shop/core/mixins/index.dart';
 import 'package:equatable/equatable.dart';
-import 'package:bas_clean_architecture/index.dart';
+import 'package:lavi_studio_shop/index.dart';
 
 part 'global_state.dart';
 

@@ -1,4 +1,4 @@
-package com.example.bas_clean_architecture
+package com.example.lavi_studio_shop
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,7 +1,7 @@
-import 'package:bas_clean_architecture/common/index.dart';
-import 'package:bas_clean_architecture/index.dart';
-import 'package:bas_clean_architecture/theme/index.dart';
-import 'package:bas_clean_architecture/utils/index.dart';
+import 'package:lavi_studio_shop/common/index.dart';
+import 'package:lavi_studio_shop/index.dart';
+import 'package:lavi_studio_shop/theme/index.dart';
+import 'package:lavi_studio_shop/utils/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_calendar_carousel/classes/event.dart';
 import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart';

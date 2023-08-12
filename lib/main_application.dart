@@ -1,5 +1,5 @@
-import 'package:bas_clean_architecture/core/local_data/pref_utils.dart';
-import 'package:bas_clean_architecture/index.dart';
+import 'package:lavi_studio_shop/core/local_data/pref_utils.dart';
+import 'package:lavi_studio_shop/index.dart';
 import 'package:flutter/material.dart';
 
 import 'core/routes/router_table.dart';

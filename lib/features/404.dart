@@ -1,4 +1,4 @@
-import 'package:bas_clean_architecture/features/login/presentation/pages/login_page.dart';
+import 'package:lavi_studio_shop/features/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class Unknown404 extends StatelessWidget {

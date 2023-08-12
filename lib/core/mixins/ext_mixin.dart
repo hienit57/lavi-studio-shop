@@ -1,6 +1,6 @@
-import 'package:bas_clean_architecture/common/index.dart';
-import 'package:bas_clean_architecture/index.dart';
-import 'package:bas_clean_architecture/theme/app_colors.dart';
+import 'package:lavi_studio_shop/common/index.dart';
+import 'package:lavi_studio_shop/index.dart';
+import 'package:lavi_studio_shop/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

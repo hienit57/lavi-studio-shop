@@ -1,5 +1,5 @@
-import 'package:bas_clean_architecture/core/const.dart';
-import 'package:bas_clean_architecture/utils/index.dart';
+import 'package:lavi_studio_shop/core/const.dart';
+import 'package:lavi_studio_shop/utils/index.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class FormatUtils {

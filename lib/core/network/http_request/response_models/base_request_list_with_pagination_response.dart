@@ -1,4 +1,4 @@
-import 'package:bas_clean_architecture/core/network/http_request/response_models/base_request_list_response.dart';
+import 'package:lavi_studio_shop/core/network/http_request/response_models/base_request_list_response.dart';
 
 class BaseRequestListResponseWithPagination<T>
     extends BaseRequestListResponse<T> {

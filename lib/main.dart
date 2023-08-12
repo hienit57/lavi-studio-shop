@@ -1,6 +1,6 @@
-import 'package:bas_clean_architecture/bloc_providers.dart';
-import 'package:bas_clean_architecture/firebase_options.dart';
-import 'package:bas_clean_architecture/index.dart';
+import 'package:lavi_studio_shop/bloc_providers.dart';
+import 'package:lavi_studio_shop/firebase_options.dart';
+import 'package:lavi_studio_shop/index.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

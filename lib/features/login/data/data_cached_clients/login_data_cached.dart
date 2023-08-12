@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:bas_clean_architecture/core/local_data/pref_cached_client.dart';
-import 'package:bas_clean_architecture/core/local_data/pref_keys.dart';
-import 'package:bas_clean_architecture/features/login/data/models/login_response_model.dart';
+import 'package:lavi_studio_shop/core/local_data/pref_cached_client.dart';
+import 'package:lavi_studio_shop/core/local_data/pref_keys.dart';
+import 'package:lavi_studio_shop/features/login/data/models/login_response_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DataUserLoginCachedClient extends PrefCacheClient<LoginResponse> {

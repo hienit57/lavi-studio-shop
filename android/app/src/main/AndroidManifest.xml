@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.example.bas_clean_architecture">
+package="com.example.lavi_studio_shop">
     <application
-        android:label="bas_clean_architecture"
+        android:label="lavi_studio_shop"
         android:name="${applicationName}"
        >
         <activity

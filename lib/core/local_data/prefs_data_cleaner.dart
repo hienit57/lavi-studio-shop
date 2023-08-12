@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:bas_clean_architecture/core/local_data/pref_keys.dart';
-import 'package:bas_clean_architecture/utils/shared_pref_helpder.dart';
+import 'package:lavi_studio_shop/core/local_data/pref_keys.dart';
+import 'package:lavi_studio_shop/utils/shared_pref_helpder.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PrefsDataCleaner {

@@ -1,4 +1,4 @@
-import 'package:bas_clean_architecture/core/network/http_request/request_model/request_model.dart';
+import 'package:lavi_studio_shop/core/network/http_request/request_model/request_model.dart';
 
 class RefreshTokenRequest extends RequestModel {
   RefreshTokenRequest(String? query)

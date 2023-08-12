@@ -1,4 +1,4 @@
-import 'package:bas_clean_architecture/index.dart';
+import 'package:lavi_studio_shop/index.dart';
 
 mixin LoadingMixin {
   showLoading() {

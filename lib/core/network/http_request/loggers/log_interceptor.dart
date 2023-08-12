@@ -1,4 +1,4 @@
-import 'package:bas_clean_architecture/core/network/http_request/loggers/pretty_dio_logger.dart';
+import 'package:lavi_studio_shop/core/network/http_request/loggers/pretty_dio_logger.dart';
 
 final PrettyDioLogger dioLogger = PrettyDioLogger(
   requestHeader: true,
