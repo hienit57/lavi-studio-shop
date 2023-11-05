@@ -10,21 +10,22 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-java@v1
-        with:
-          java-version: "12.x"
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Flutter
-        uses: subosito/flutter-action@v1
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.13.3"
 
-      - name: "Run flutter pub get"
+      - name: Clean Cache
+        run: flutter clean
+
+      - name: Install dependencies
         run: flutter pub get
 
       - name: "Build Web App"
-        run: flutter build web
+        run: flutter build web --web-renderer canvaskit
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
