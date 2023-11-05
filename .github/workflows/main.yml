@@ -10,61 +10,87 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java-version: "11.0.18"
+          java-version: "12.x"
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v1
         with:
           flutter-version: "3.13.3"
 
-      - name: Clean Cache
-        run: flutter clean
-
-      - name: Install dependencies
+      - name: "Run flutter pub get"
         run: flutter pub get
 
-      # - name: Generate file .g
-      #   run: flutter pub run build_runner build --delete-conflicting-outputs
+      - name: "Build Web App"
+        run: flutter build web
 
-      - name: Build APK
-        run: flutter build apk lib/main.dart --release --no-tree-shake-icons
-
-      - name: Push to Release
-        uses: ncipollo/release-action@v1
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          atifacts: "build/app/outputs/flutter-apk/app-release.apk"
-          tag: v1.0.$ {{ github.run_number }}
-          token: $ {{ secrets.TOKEN }}
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MYAPPLICATION }}"
+          channelId: live
+          projectId: lavi-studio-shop
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels
 
-      # - name: Distribute app to android
-      #   run: |
-      #     echo "Deploying to Firebase..."
-      #     wget -O firebase-cli.tar.gz https://firebase.tools/bin/linux/latest
-      #     tar -xzvf firebase-cli.tar.gz
-      #     ./bin/firebase auth:token:store $FIREBASE_TOKEN
-      #     ./bin/firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk --app $FIREBASE_ANDROID_APP_ID --groups $FIREBASE_DISTRIBUTION_GROUP
-      #   env:
-      #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_API_TOKEN }}
-      #     FIREBASE_APP_ID: ${{ secrets.FIREBASE_ANDROID_APP_ID }}
-      #     FIREBASE_DISTRIBUTION_GROUP: "your-distribution-group"
+    # steps:
+    #   - uses: actions/checkout@v1
+    #   - uses: actions/setup-java@v1
+    #     with:
+    #       java-version: "11.0.18"
 
-      # - name: Build Flutter web
-      #   run: flutter build web --web-renderer canvaskit --no-tree-shake-icons --release
+    #   - name: Set up Flutter
+    #     uses: subosito/flutter-action@v1
+    #     with:
+    #       flutter-version: "3.13.3"
 
-      # - name: Deploy to hosting
-      #   # Thay đổi dòng lệnh này tùy thuộc vào nơi bạn muốn deploy (Ví dụ: Firebase Hosting, Netlify, GitHub Pages, ...)
-      #   run: |
-      #     echo "Deploying to Firebase..."
-      #     FIREBASE_CLI_URL=$(curl -s -L -o /dev/null -w %{url_effective} https://firebase.tools/bin/linux/latest)
-      #     wget -O firebase-cli.tar.gz --no-check-certificate "$FIREBASE_CLI_URL"
-      #     curl -sL $FIREBASE_CLI_URL | bash
-      #     ./firebase deploy --token $FIREBASE_TOKEN
+    #   - name: Clean Cache
+    #     run: flutter clean
 
-      #   env:
-      #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_API_TOKEN }}
+    #   - name: Install dependencies
+    #     run: flutter pub get
+
+    # - name: Generate file .g
+    #   run: flutter pub run build_runner build --delete-conflicting-outputs
+
+    # - name: Build APK
+    #   run: flutter build apk lib/main.dart --release --no-tree-shake-icons
+
+    # - name: Push to Release
+    #   uses: ncipollo/release-action@v1
+    #   with:
+    #     atifacts: "build/app/outputs/flutter-apk/app-release.apk"
+    #     tag: v1.0.$ {{ github.run_number }}
+    #     token: $ {{ secrets.TOKEN }}
+
+    # - name: Distribute app to android
+    #   run: |
+    #     echo "Deploying to Firebase..."
+    #     wget -O firebase-cli.tar.gz https://firebase.tools/bin/linux/latest
+    #     tar -xzvf firebase-cli.tar.gz
+    #     ./bin/firebase auth:token:store $FIREBASE_TOKEN
+    #     ./bin/firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk --app $FIREBASE_ANDROID_APP_ID --groups $FIREBASE_DISTRIBUTION_GROUP
+    #   env:
+    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_API_TOKEN }}
+    #     FIREBASE_APP_ID: ${{ secrets.FIREBASE_ANDROID_APP_ID }}
+    #     FIREBASE_DISTRIBUTION_GROUP: "your-distribution-group"
+
+    # - name: Build Flutter web
+    #   run: flutter build web --web-renderer canvaskit --no-tree-shake-icons --release
+
+    # - name: Deploy to hosting
+    #   # Thay đổi dòng lệnh này tùy thuộc vào nơi bạn muốn deploy (Ví dụ: Firebase Hosting, Netlify, GitHub Pages, ...)
+    #   run: |
+    #     echo "Deploying to Firebase..."
+    #     FIREBASE_CLI_URL=$(curl -s -L -o /dev/null -w %{url_effective} https://firebase.tools/bin/linux/latest)
+    #     wget -O firebase-cli.tar.gz --no-check-certificate "$FIREBASE_CLI_URL"
+    #     curl -sL $FIREBASE_CLI_URL | bash
+    #     ./firebase deploy --token $FIREBASE_TOKEN
+
+    #   env:
+    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_API_TOKEN }}
 
   # build:
   #   name: Build APK
