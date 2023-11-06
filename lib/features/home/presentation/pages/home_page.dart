@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.h),
                   child: CText(
-                    text: 'Lavi Studio',
+                    text: 'Lavi Studio Shop',
                     fontSize: 40.sp,
                     fontFamily: AppFonts.dMSerifDisplayRegular,
                     textColor: AppColors.brick,
