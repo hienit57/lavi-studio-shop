@@ -28,10 +28,10 @@ jobs:
       - name: Deploy to hosting
         run: |
           echo "Deploying to Firebase..."
-          firebase deploy --token "1//0eCrl0G0KB_MBCgYIARAAGA4SNwF-L9Ir2g61xs7WuZUvLja1Xhf9bORTDpzUvK-e5UjqF-WwxjSY5u0hdCQP-QwqYkI0j91VV_I"
+          ./firebase deploy --token $FIREBASE_TOKEN
 
-        # env:
-        #   FIREBASE_TOKEN: ${{ secrets.FIREBASE_API_TOKEN }}
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       # - uses: FirebaseExtended/action-hosting-deploy@v0
       #   with:
