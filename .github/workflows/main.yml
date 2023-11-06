@@ -1,4 +1,4 @@
-name: Test, Build and Release apk
+name: Test, Build and Release
 
 on:
   push:
@@ -6,8 +6,6 @@ on:
       - develop
 jobs:
   deploy:
-    name: Build & Release
-    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -25,8 +23,7 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: "Build Web App"
-        run: flutter build web --web-renderer canvaskit
+      - run: flutter build web --web-renderer canvaskit --release
 
       - name: Deploy to hosting
         run: |
