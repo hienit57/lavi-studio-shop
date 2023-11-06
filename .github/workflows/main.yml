@@ -31,7 +31,7 @@ jobs:
           FIREBASE_CLI_URL=$(curl -s -L -o /dev/null -w %{url_effective} https://firebase.tools/bin/linux/latest)
           wget -O firebase-cli.tar.gz --no-check-certificate "$FIREBASE_CLI_URL"
           curl -sL https://firebase.tools | bash
-          ./firebase deploy --token $FIREBASE_TOKEN
+          firebase deploy --token $FIREBASE_TOKEN
 
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
