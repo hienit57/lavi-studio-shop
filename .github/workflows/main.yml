@@ -7,7 +7,8 @@ on:
 jobs:
   deploy:
     name: Build & Release
-    runs-on: macos-latest
+    needs: build
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -27,14 +28,22 @@ jobs:
       - name: "Build Web App"
         run: flutter build web --web-renderer canvaskit
 
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MYAPPLICATION }}"
-          channelId: live
-          projectId: lavi-studio-shop
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+      - name: Deploy to hosting
+        run: |
+          echo "Deploying to Firebase..."
+          firebase deploy --token "1//0eCrl0G0KB_MBCgYIARAAGA4SNwF-L9Ir2g61xs7WuZUvLja1Xhf9bORTDpzUvK-e5UjqF-WwxjSY5u0hdCQP-QwqYkI0j91VV_I"
+
+        # env:
+        #   FIREBASE_TOKEN: ${{ secrets.FIREBASE_API_TOKEN }}
+
+      # - uses: FirebaseExtended/action-hosting-deploy@v0
+      #   with:
+      #     repoToken: "${{ secrets.TOKEN }}"
+      #     firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MYAPPLICATION }}"
+      #     channelId: live
+      #     projectId: lavi-studio-shop
+      #   env:
+      #     FIREBASE_CLI_PREVIEWS: hostingchannels
 
     # steps:
     #   - uses: actions/checkout@v1
