@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "683561064949",
+    "project_id": "lavi-studio-shop",
+    "storage_bucket": "lavi-studio-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683561064949:android:4ab877a45ff66efecee8bc",
+        "android_client_info": {
+          "package_name": "lavistudio.shop.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683561064949-gmov3f60g4igfhukviug1h5pvg5fvu4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnHg1EfUTGHfcVF5A-2JvmqBTmHUryE58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683561064949-gmov3f60g4igfhukviug1h5pvg5fvu4u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

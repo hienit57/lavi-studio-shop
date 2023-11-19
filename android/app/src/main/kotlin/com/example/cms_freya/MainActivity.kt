@@ -1,4 +1,4 @@
-package com.example.lavi_studio_shop
+package lavistudio.shop.com
 
 import io.flutter.embedding.android.FlutterActivity
 

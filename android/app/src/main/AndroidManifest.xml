@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.example.lavi_studio_shop">
+package="lavistudio.shop.com">
     <application
         android:label="lavi_studio_shop"
         android:name="${applicationName}"
